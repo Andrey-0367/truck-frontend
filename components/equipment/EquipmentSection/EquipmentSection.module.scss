@@ -1,0 +1,39 @@
+.equipmentPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+  h1 {
+    text-align: center;
+    color: #660000;
+    margin-bottom: 3rem;
+    font-family: 'Georgia', serif;
+  }
+}
+
+.section {
+  margin-bottom: 4rem;
+  
+  h2 {
+    color: #1a2a6c;
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+    border-bottom: 2px solid #b21f1f;
+    padding-bottom: 0.5rem;
+  }
+}
+
+.cardsContainer {
+  display: grid;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .equipmentPage {
+    padding: 1rem;
+  }
+}

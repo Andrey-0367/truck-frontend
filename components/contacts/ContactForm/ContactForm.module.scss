@@ -1,0 +1,165 @@
+.contactForm {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 
+    10px 10px 30px rgba(179, 0, 0, 0.15),
+    -10px -10px 30px rgba(255, 255, 255, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  h2 {
+    text-align: center;
+    color: #660000;
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.formGroup {
+  input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    
+    &:focus {
+      outline: none;
+      border-color: #b21f1f;
+      box-shadow: 0 0 0 2px rgba(178, 31, 31, 0.2);
+    }
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.robotCheck, .agreement {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+  }
+}
+
+.policyLink {
+  color: #b21f1f;
+  text-decoration: underline;
+  cursor: pointer;
+  
+  &:hover {
+    color: #8a1919;
+  }
+}
+
+.submitButton {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(178, 31, 31, 0.3);
+  }
+  
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  
+  h3 {
+    color: #660000;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.policyText {
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.closeButton {
+  background: #b21f1f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 1rem auto 0;
+  
+  &:hover {
+    background: #8a1919;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactForm {
+    padding: 1.5rem;
+  }
+  
+  .modalContent {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

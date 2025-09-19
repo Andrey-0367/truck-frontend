@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main {
+  flex: 1 0 auto; /* Это заставляет основной контент занимать все доступное пространство */
+  width: 100%;
+}

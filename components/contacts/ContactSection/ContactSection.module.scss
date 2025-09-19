@@ -1,0 +1,103 @@
+.contactPage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  
+  h1 {
+    text-align: center;
+    color: #660000;
+    margin-bottom: 2rem;
+    font-family: 'Georgia', serif;
+  }
+}
+
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: stretch;
+  
+  // Убедимся, что контейнер занимает достаточно места
+  min-height: 500px;
+  
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+}
+
+.contactInfo {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 
+    10px 10px 30px rgba(179, 0, 0, 0.15),
+    -10px -10px 30px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  h2 {
+    color: #660000;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Georgia', serif;
+  }
+}
+
+.infoItem {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  h3 {
+    color: #1a2a6c;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  p {
+    margin: 0.3rem 0;
+    color: #495057;
+  }
+}
+
+.formSection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapSection {
+  h2 {
+    text-align: center;
+    color: #660000;
+    margin-bottom: 1.5rem;
+    font-family: 'Georgia', serif;
+  }
+}
+
+.mapContainer {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 
+    10px 10px 30px rgba(179, 0, 0, 0.15),
+    -10px -10px 30px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .contactPage {
+    padding: 1rem;
+  }
+  
+  .contactInfo {
+    padding: 1.5rem;
+  }
+}

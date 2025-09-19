@@ -1,0 +1,143 @@
+.header {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+// Адаптивность для мобильных устройств
+@media (max-width: 640px) {
+  .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  
+  span {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+  
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
+// Стили для открытого меню
+@media (max-width: 768px) {
+  .nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    
+    &.navOpen {
+      height: calc(100vh - 70px);
+    }
+  }
+  
+  .navLink {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    
+    &:hover::after {
+      width: 50%;
+      left: 25%;
+    }
+  }
+}
