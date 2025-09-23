@@ -15,7 +15,7 @@ export default function ContactSection() {
           
           <div className={styles.infoItem}>
             <h3>Адрес</h3>
-            <p>г. Москва, ул. Ленина, д. 1</p>
+            <p>141282, Московская область, г Ивантеевка, ул Толмачева, д. 27/14 </p>
           </div>
           
           <div className={styles.infoItem}>
@@ -25,7 +25,7 @@ export default function ContactSection() {
           
           <div className={styles.infoItem}>
             <h3>Email</h3>
-            <p>info@truckcompany.ru</p>
+            <p>pdtrans.ru</p>
           </div>
           
           <div className={styles.infoItem}>
@@ -35,9 +35,9 @@ export default function ContactSection() {
           
           <div className={styles.infoItem}>
             <h3>Реквизиты</h3>
-            <p>ООО "ТракКомпани"</p>
-            <p>ИНН: 1234567890</p>
-            <p>ОГРН: 1234567890123</p>
+            <p>ООО «ТК Палладиум»</p>
+            <p>ИНН/КПП: 5038194273/503801001</p>
+            <p>ОГРН: 1255000084085</p>
           </div>
         </div>
         

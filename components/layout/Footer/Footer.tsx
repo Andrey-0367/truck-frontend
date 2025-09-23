@@ -9,7 +9,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>TruckCompany</h3>
+            <h3 className={styles.footerTitle}>PALLADIUM</h3>
             <p className={styles.footerDescription}>
               Мы предоставляем качественные услуги грузоперевозок 
               с использованием современной техники.
@@ -29,8 +29,8 @@ export default function Footer() {
             <h4 className={styles.footerSubtitle}>Контакты</h4>
             <ul className={styles.footerContacts}>
               <li>📞 +7 (123) 456-78-90</li>
-              <li>✉️ info@truckcompany.ru</li>
-              <li>📍 г. Москва, ул. Грузовая, д. 12</li>
+              <li>✉️ pdtrans.ru</li>
+              <li>📍 Московская область, г Ивантеевка, ул Толмачева, д. 27/14 </li>
             </ul>
           </div>
 

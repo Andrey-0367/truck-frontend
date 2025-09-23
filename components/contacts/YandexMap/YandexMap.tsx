@@ -13,15 +13,15 @@ export const YandexMapUI = (): JSX.Element => {
           autoFitToViewport: 'none',
         }}
         defaultState={{
-          center: [56.019247, 37.955254],
+          center: [55.961672, 37.932288],
           zoom: 14,
         }}
       >
         <ZoomControl />
         <GeolocationControl options={{ float: 'right' }} />
         <Placemark
-          defaultGeometry={[56.019247, 37.955254]}
-          properties={{ iconCaption: 'TruckCompany' }}
+          defaultGeometry={[55.961672, 37.932288]}
+          properties={{ iconCaption: 'PALLADIUM' }}
         />
       </Map>
     </YMaps>
