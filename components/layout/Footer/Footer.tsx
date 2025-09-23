@@ -20,7 +20,6 @@ export default function Footer() {
             <h4 className={styles.footerSubtitle}>Навигация</h4>
             <ul className={styles.footerLinks}>
               <li><Link href="/">Главная</Link></li>
-              <li><Link href="/about">О нас</Link></li>
               <li><Link href="/equipment">Техника</Link></li>
               <li><Link href="/contact">Контакты</Link></li>
             </ul>

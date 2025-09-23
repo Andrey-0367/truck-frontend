@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          TruckCompany
+          PALLADIUM
         </Link>
         
         <button 
@@ -28,9 +28,6 @@ export default function Header() {
           <Link href="/" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
             Главная
           </Link>
-          {/* <Link href="/about" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
-            О нас
-          </Link> */}
           <Link href="/equipment" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>
             Техника
           </Link>

@@ -1,10 +1,11 @@
 .header {
-  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  background: linear-gradient(135deg, #131212, #760707, #fdbb2d);
   padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  font-family: 'Lato', sans-serif; 
 }
 
 .container {
@@ -17,15 +18,22 @@
 }
 
 .logo {
-  color: white;
+  color: transparent;
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
+  background: linear-gradient(145deg, #d4d4d4, #fff, #7e7e7e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3),
+               0px 4px 5px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.3);
   
   &:hover {
     transform: scale(1.05);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4),
+                 0px 6px 7px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -39,16 +47,26 @@
 }
 
 .navLink {
-  color: white;
+  /* Серебряный градиентный текст как в логотипе */
+  color: transparent;
+  background: linear-gradient(145deg, #d4d4d4, #fff, #7e7e7e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.2px rgba(0, 0, 0, 0.3);
+  
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600; /* Тот же вес шрифта что и у логотипа */
+  font-size: 1.1rem;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.3s ease;
   position: relative;
   
   &:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(145deg, #d4d4d4, #fff, #7e7e7e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: translateY(-2px);
   }
   
   &::after {
@@ -58,7 +76,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: white;
+    background: linear-gradient(145deg, #d4d4d4, #fff, #7e7e7e);
     transition: width 0.3s ease;
   }
   
@@ -67,7 +85,7 @@
   }
   
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1rem;
     padding: 0.4rem 0.8rem;
   }
 }
@@ -84,6 +102,7 @@
     justify-content: center;
   }
 }
+
 .menuToggle {
   display: none;
   flex-direction: column;
@@ -98,7 +117,7 @@
   span {
     width: 2rem;
     height: 0.25rem;
-    background: white;
+    background: linear-gradient(145deg, #d4d4d4, #fff, #7e7e7e);
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;

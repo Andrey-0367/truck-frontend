@@ -1,0 +1,86 @@
+.palladLogo {
+  display: inline-block;
+  line-height: 0;
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+  @media (max-width: 768px) { 
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.logoSvg {
+  width: 630px;
+  height: auto;
+  background: transparent;
+  display: block;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center center;
+}
+
+// Основные стили для неонового эффекта
+.neonContour {
+  fill: rgba(255, 255, 255, 0.5);
+  filter: 
+    drop-shadow(0 0 5px rgba(179, 0, 0, 0.1)) 
+    drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))
+}
+
+.neonBody {
+  fill: rgba(255, 255, 255, 0.5);
+  filter:
+    drop-shadow(0 0 3px rgba(255, 255, 255, 0.5))
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 9px rgba(179, 0, 0, 0.1)) 
+}
+
+
+
+// Анимация появления
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotateX(-10deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) rotateX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+// Анимация для SVG после загрузки
+.logoSvg {
+  animation: scaleIn 3s ease-in-out forwards;
+}
+
+
+@media (max-width: 768px) { 
+  .palladLogo {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-right: 260px;
+  }
+  
+  .logoSvg {
+    width: 250%;
+    max-width: 270px
+     
+  }
+  
+  .neonContour,
+  .neonBody {
+    filter:
+      drop-shadow(0 0 3px rgba(255, 255, 255, 0.5))
+      drop-shadow(0 0 6px rgba(255, 255, 255, 0.8))
+      drop-shadow(0 0 9px rgba(179, 0, 0, 0.1));
+  }
+}
