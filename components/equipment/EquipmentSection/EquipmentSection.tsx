@@ -10,7 +10,7 @@ export default function EquipmentSection() {
     {
       id: 1,
       title: "Контейнеровоз 40ft",
-      image: "/car.jpg",
+      image: "/container.jpg",
       specs: {
         length: "12.2 м",
         capacity: "28 т",
@@ -23,7 +23,7 @@ export default function EquipmentSection() {
     {
       id: 2,
       title: "Контейнеровоз 20ft",
-      image: "/car.jpg",
+      image: "/cont-2.jpg",
       specs: {
         length: "6.1 м",
         capacity: "25 т",
@@ -36,7 +36,7 @@ export default function EquipmentSection() {
     {
       id: 3,
       title: "Контейнеровоз универсальный",
-      image: "/car.jpg",
+      image: "/cont-1.jpg",
       specs: {
         length: "13.6 м",
         capacity: "30 т",
@@ -64,7 +64,7 @@ export default function EquipmentSection() {
     {
       id: 5,
       title: "Полуприцеп рефрижератор",
-      image: "/car.jpg",
+      image: "/ref.jpeg",
       specs: {
         length: "13.6 м",
         capacity: "20 т",
@@ -77,7 +77,7 @@ export default function EquipmentSection() {
     {
       id: 6,
       title: "Полуприцеп изотермический",
-      image: "/car.jpg",
+      image: "/isoterm.jpg",
       specs: {
         length: "13.6 м",
         capacity: "21 т",
@@ -89,7 +89,7 @@ export default function EquipmentSection() {
     {
       id: 7,
       title: "Полуприцеп шторный",
-      image: "/car.jpg",
+      image: "/fura-3.jpg",
       specs: {
         length: "13.6 м",
         capacity: "22 т",
@@ -104,7 +104,7 @@ export default function EquipmentSection() {
     {
       id: 8,
       title: "Газель NEXT",
-      image: "/gazel.jpg",
+      image: "/gaz-1.jpeg",
       specs: {
         length: "4.2 м",
         capacity: "1.5 т",
@@ -118,8 +118,8 @@ export default function EquipmentSection() {
       title: "Газель удлиненная",
       image: "/gazel.jpg",
       specs: {
-        length: "4.8 м",
-        capacity: "1.8 т",
+        length: "6.0 м",
+        capacity: "3.0 т",
         volume: "14 м³",
         pallets: "8 европаллет",
         bodyType: "Тентованный"
@@ -128,7 +128,7 @@ export default function EquipmentSection() {
     {
       id: 10,
       title: "Газель рефрижератор",
-      image: "/gazel.jpg",
+      image: "/gaz-ref.jpg",
       specs: {
         length: "4.2 м",
         capacity: "1.3 т",
@@ -144,7 +144,7 @@ export default function EquipmentSection() {
     <div className={styles.equipmentPage}>
       <h1>Наша техника</h1>
       
-      <div className={styles.section}>
+      <div className={styles.section} id="containers">
         <h2>Контейнерные перевозки</h2>
         <div className={styles.cardsContainer}>
           {containerTrucks.map(truck => (
@@ -153,7 +153,7 @@ export default function EquipmentSection() {
         </div>
       </div>
       
-      <div className={styles.section}>
+      <div className={styles.section} id="semi-trailers">
         <h2>Полуприцепы</h2>
         <div className={styles.cardsContainer}>
           {semiTrailers.map(trailer => (
@@ -162,7 +162,7 @@ export default function EquipmentSection() {
         </div>
       </div>
       
-      <div className={styles.section}>
+      <div className={styles.section}id="vans">
         <h2>Газели</h2>
         <div className={styles.cardsContainer}>
           {gazelles.map(gazelle => (

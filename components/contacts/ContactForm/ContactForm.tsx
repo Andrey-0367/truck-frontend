@@ -21,17 +21,38 @@ export default function ContactForm() {
     setPhoneError("");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    if (formData.phone.length < 18) {
-      setPhoneError("Пожалуйста, введите корректный номер телефона");
-      return;
+  if (formData.phone.length < 18) {
+    setPhoneError("Пожалуйста, введите корректный номер телефона");
+    return;
+  }
+
+  try {
+    const response = await fetch('/send-email.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Сообщение отправлено! Мы свяжемся с вами в ближайшее время.");
+      setFormData({ name: "", phone: "", email: "", message: "" });
+      setIsRobot(false);
+      setIsAgreed(false);
+    } else {
+      throw new Error(result.message);
     }
-
-    console.log("Данные формы:", formData);
-    alert("Сообщение отправлено! Мы свяжемся с вами в ближайшее время.");
-  };
+  } catch (error) {
+    console.error('Error:', error);
+    alert("Произошла ошибка при отправке. Пожалуйста, попробуйте еще раз.");
+  }
+};
 
   return (
     <div className={styles.contactForm}>

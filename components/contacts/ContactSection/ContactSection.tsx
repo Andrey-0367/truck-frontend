@@ -20,12 +20,16 @@ export default function ContactSection() {
           
           <div className={styles.infoItem}>
             <h3>Телефон</h3>
-            <p>+7 (3952) 123-456</p>
+            <p>
+              <a href="tel:+73952123456" className={styles.phoneLink}>
+                +7 (3952) 123-456
+              </a>
+            </p>
           </div>
           
           <div className={styles.infoItem}>
             <h3>Email</h3>
-            <p>pdtrans.ru</p>
+            <p>info@pdtrans.ru.</p>
           </div>
           
           <div className={styles.infoItem}>

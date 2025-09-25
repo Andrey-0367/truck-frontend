@@ -11,25 +11,25 @@ export default function HeroSection() {
 
   // Данные для карточек
   const cards = [
-    {
-      id: 1,
-      title: "Перевозка контейнеров",
-      image: "/container.jpg",
-      link: "/equipment"
-    },
-    {
-      id: 2,
-      title: "Полуприцепы",
-      image: "/fura.jpg",
-      link: "/equipment"
-    },
-    {
-      id: 3,
-      title: "Газель",
-      image: "/gazel.jpg",
-      link: "/equipment"
-    }
-  ];
+  {
+    id: 1,
+    title: "Перевозка контейнеров",
+    image: "/container.jpg",
+    link: "/equipment#containers" 
+  },
+  {
+    id: 2,
+    title: "Полуприцепы",
+    image: "/fura.jpg",
+    link: "/equipment#semi-trailers" 
+  },
+  {
+    id: 3,
+    title: "Газель",
+    image: "/gazel.jpg",
+    link: "/equipment#vans" 
+  }
+];
 
   useEffect(() => {
     const timer = setTimeout(() => {

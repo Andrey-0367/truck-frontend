@@ -9,7 +9,7 @@ export default function Footer() {
       <div className={styles.container}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3 className={styles.footerTitle}>PALLADIUM</h3>
+            <h3 className={`${styles.footerTitle} ${styles.gradientText}`}>PALLADIUM</h3>
             <p className={styles.footerDescription}>
               Мы предоставляем качественные услуги грузоперевозок 
               с использованием современной техники.
@@ -17,25 +17,45 @@ export default function Footer() {
           </div>
 
           <div className={styles.footerSection}>
-            <h4 className={styles.footerSubtitle}>Навигация</h4>
+            <h4 className={`${styles.footerSubtitle} ${styles.gradientText}`}>Навигация</h4>
             <ul className={styles.footerLinks}>
-              <li><Link href="/">Главная</Link></li>
-              <li><Link href="/equipment">Техника</Link></li>
-              <li><Link href="/contact">Контакты</Link></li>
+              <li><Link href="/" className={styles.gradientLink}>Главная</Link></li>
+              <li><Link href="/equipment" className={styles.gradientLink}>Техника</Link></li>
+              <li><Link href="/contact" className={styles.gradientLink}>Контакты</Link></li>
             </ul>
           </div>
 
           <div className={styles.footerSection}>
-            <h4 className={styles.footerSubtitle}>Контакты</h4>
+            <h4 className={`${styles.footerSubtitle} ${styles.gradientText}`}>Контакты</h4>
             <ul className={styles.footerContacts}>
-              <li>📞 +7 (123) 456-78-90</li>
-              <li>✉️ pdtrans.ru</li>
-              <li>📍 Московская область, г Ивантеевка, ул Толмачева, д. 27/14 </li>
+              <li>
+                <span className={styles.contactIcon}>📞</span>
+                <a href="tel:+71234567890" className={styles.gradientLink}>
+                  +7 (123) 456-78-90
+                </a>
+              </li>
+              <li>
+                <span className={styles.contactIcon}>✉️</span>
+                <a href="mailto:info@pdtrans.ru" className={styles.gradientLink}>
+                  info@pdtrans.ru
+                </a>
+              </li>
+              <li>
+                <span className={styles.contactIcon}>📍</span>
+                <a 
+                  href="https://yandex.ru/maps/?text=Московская область, г Ивантеевка, ул Толмачева, д. 27/14" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className={styles.gradientLink}
+                >
+                  Московская область, г Ивантеевка, ул Толмачева, д. 27/14
+                </a>
+              </li>
             </ul>
           </div>
 
           <div className={styles.footerSection}>
-            <h4 className={styles.footerSubtitle}>Мы в соцсетях</h4>
+            <h4 className={`${styles.footerSubtitle} ${styles.gradientText}`}>Мы в соцсетях</h4>
             <div className={styles.socialLinks}>
               <a href="#" className={styles.socialLink} aria-label="Facebook">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -57,7 +77,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>&copy; {currentYear} TruckCompany. Все права защищены.</p>
+          <p className={styles.gradientText}>&copy; {currentYear} TruckCompany. Все права защищены.</p>
         </div>
       </div>
     </footer>
